@@ -1,0 +1,53 @@
+# Vocabulary Properties
+uuid = 03ab744f-a5ed-49de-a762-492b3abeb2cf
+
+# com.bnpparibas.cardif.rule.utils.DateUtils
+com.bnpparibas.cardif.rule.utils.DateUtils#concept.label = date utils
+com.bnpparibas.cardif.rule.utils.DateUtils.addDays(java.util.Date,int)#phrase.navigation = add {1} days to the date {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.addDaysToDate(java.util.Date,int)#phrase.navigation = add to {0} {1} days
+com.bnpparibas.cardif.rule.utils.DateUtils.addMonths(java.util.Date,int)#phrase.navigation = add {1} months to the date {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.addMonthsToDateRange(java.util.Date,java.util.Date,int)#phrase.navigation = add {2} to the date range from {0} to {1}
+com.bnpparibas.cardif.rule.utils.DateUtils.addYears(java.util.Date,int)#phrase.navigation = add {1} years to the date {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.countDays(java.util.Date,java.util.Date)#phrase.navigation = count days between {0} and {1}
+com.bnpparibas.cardif.rule.utils.DateUtils.countMonths(java.util.Date,java.util.Date)#phrase.navigation = count months between {0} and {1}
+com.bnpparibas.cardif.rule.utils.DateUtils.countYears(java.util.Date,java.util.Date)#phrase.navigation = count years between {0} and {1}
+com.bnpparibas.cardif.rule.utils.DateUtils.dateInThePast(java.util.Date,int,int)#phrase.navigation = date in the past using {1} years, {2} days and {0} as reference
+com.bnpparibas.cardif.rule.utils.DateUtils.extractDay(java.util.Date)#phrase.navigation = extract day from {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.extractMonth(java.util.Date)#phrase.navigation = extract month from {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.extractYear(java.util.Date)#phrase.navigation = extract year from {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.firstDayOfNextMonth(java.util.Date)#phrase.navigation = the first day of the next month of {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.formatDate(java.util.Date,java.lang.String)#phrase.navigation = format the date {0} with {1} mask
+com.bnpparibas.cardif.rule.utils.DateUtils.getDayOfMonth(java.util.Date)#phrase.navigation = day of month of {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.getFirstDayOfMonthOf(java.util.Date)#phrase.navigation = first day of month of {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.getSystemDate()#phrase.navigation = the system date
+com.bnpparibas.cardif.rule.utils.DateUtils.getUndefinedDate()#phrase.navigation = an undefined date
+com.bnpparibas.cardif.rule.utils.DateUtils.lastDayOfMonth(java.util.Date)#phrase.navigation = the last day of month of {0}
+com.bnpparibas.cardif.rule.utils.DateUtils.lastDayOfMonth(java.util.Date,int)#phrase.navigation = the last day of month of {0} plus {1}
+com.bnpparibas.cardif.rule.utils.DateUtils.newDate(int,int,int)#phrase.navigation = a new date with day {0}, month {1} and year {2}
+
+# com.bnpparibas.cardif.rule.utils.EnumerationUtils
+com.bnpparibas.cardif.rule.utils.EnumerationUtils#concept.label = enumeration utils
+com.bnpparibas.cardif.rule.utils.EnumerationUtils.convertEnumToString(java.lang.Enum)#phrase.navigation = convert enum {0} to string
+
+# com.bnpparibas.cardif.rule.utils.NameUtils
+com.bnpparibas.cardif.rule.utils.NameUtils#concept.label = name utils
+com.bnpparibas.cardif.rule.utils.NameUtils.normalize(java.lang.String)#phrase.navigation = normalize {0}
+
+# com.bnpparibas.cardif.rule.utils.NumberUtils
+com.bnpparibas.cardif.rule.utils.NumberUtils#concept.label = number utils
+com.bnpparibas.cardif.rule.utils.NumberUtils.format(java.lang.Number,java.lang.String)#phrase.navigation = format the number {0} with {1} mask
+com.bnpparibas.cardif.rule.utils.NumberUtils.roundUp(java.math.BigDecimal,java.lang.Integer)#phrase.navigation = round up {0} with scale {1}
+
+# com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils
+com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils#concept.label = pre processing rule utils
+com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils.isDefined(java.lang.Object)#phrase.navigation = value {0} is defined
+com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils.isPositiveAmountValueDefined(java.math.BigDecimal)#phrase.navigation = value {0} is a positive amount value
+com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils.newAmountValue()#phrase.navigation = a new amount value
+com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils.newIntegerValue()#phrase.navigation = a new integer value
+com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils.newStringValue()#phrase.navigation = a new string value
+
+# com.bnpparibas.cardif.rule.utils.RuleUtils
+com.bnpparibas.cardif.rule.utils.RuleUtils#concept.label = rule utils
+com.bnpparibas.cardif.rule.utils.RuleUtils.booleanToString(boolean)#phrase.navigation = booleanToString({0})
+com.bnpparibas.cardif.rule.utils.RuleUtils.dateToString(java.util.Date)#phrase.navigation = dateToString({0})
+com.bnpparibas.cardif.rule.utils.RuleUtils.longToString(java.lang.Long)#phrase.navigation = longToString({0})

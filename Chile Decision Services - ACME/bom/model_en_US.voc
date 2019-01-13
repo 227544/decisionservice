@@ -1,0 +1,24 @@
+# Vocabulary Properties
+uuid = ceae8015-c052-42a4-a35f-09f653ae12ca
+
+# com.bnpparibas.cardif.domain.Claim
+com.bnpparibas.cardif.domain.Claim#concept.label = claim
+com.bnpparibas.cardif.domain.Claim.amount#phrase.action = set the amount of {this} to {amount}
+com.bnpparibas.cardif.domain.Claim.amount#phrase.navigation = {amount} of {this}
+com.bnpparibas.cardif.domain.Claim.date#phrase.action = set the date of {this} to {date}
+com.bnpparibas.cardif.domain.Claim.date#phrase.navigation = {date} of {this}
+com.bnpparibas.cardif.domain.Claim.id#phrase.action = set the id of {this} to {id}
+com.bnpparibas.cardif.domain.Claim.id#phrase.navigation = {id} of {this}
+com.bnpparibas.cardif.domain.Claim.number#phrase.action = set the number of {this} to {number}
+com.bnpparibas.cardif.domain.Claim.number#phrase.navigation = {number} of {this}
+com.bnpparibas.cardif.domain.Claim.ocurrenceDate#phrase.action = set the ocurrence date of {this} to {ocurrence date}
+com.bnpparibas.cardif.domain.Claim.ocurrenceDate#phrase.navigation = {ocurrence date} of {this}
+com.bnpparibas.cardif.domain.Claim.setUnknownId()#phrase.action = setUnknownId {this}
+
+# com.bnpparibas.cardif.domain.DecisionResponse
+com.bnpparibas.cardif.domain.DecisionResponse#concept.label = decision response
+com.bnpparibas.cardif.domain.DecisionResponse.messagesList#phrase.action = set the message of {this} to {message}
+com.bnpparibas.cardif.domain.DecisionResponse.messagesList#phrase.navigation = {message} of {this}
+com.bnpparibas.cardif.domain.DecisionResponse.setUnknownStatus()#phrase.action = setUnknownStatus {this}
+com.bnpparibas.cardif.domain.DecisionResponse.status#phrase.action = set {this} to {status}
+com.bnpparibas.cardif.domain.DecisionResponse.status#phrase.navigation = status of {this}

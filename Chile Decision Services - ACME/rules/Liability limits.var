@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Liability limits</name>
+  <uuid>992abd55-9521-4dea-8222-26c294289737</uuid>
+  <variables name="startPeriod" type="java.util.Date" initialValue="" verbalization="the start period"/>
+  <variables name="numEvents" type="java.lang.Integer" initialValue="" verbalization="the number of events"/>
+  <variables name="reportDate" type="java.util.Date" initialValue="" verbalization="the report date"/>
+  <variables name="ocurrenceDate" type="java.util.Date" initialValue="" verbalization="the ocurrence date"/>
+</ilog.rules.studio.model.base:VariableSet>
