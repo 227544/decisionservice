@@ -1,0 +1,62 @@
+
+property uuid "e51f213c-7367-4198-9d4e-b89297cd0b00"
+package com.bnpparibas.cardif.rule.utils;
+
+
+public class DateUtils
+{
+    public static java.util.Date addDays(java.util.Date currentDate, int numberOfDays);
+    public static java.util.Date addDaysToDate(java.util.Date currentDate, int quantityOfDays);
+    public static java.util.Date addMonths(java.util.Date currentDate, int numberOfMonths);
+    public static java.util.Date addMonthsToDateRange(java.util.Date initialDate, java.util.Date finalDate, int numberOfMonths);
+    public static java.util.Date addYears(java.util.Date currentDate, int numberOfYears);
+    public static int countDays(java.util.Date initialDate, java.util.Date finalDate);
+    public static int countMonths(java.util.Date initialDate, java.util.Date finalDate);
+    public static int countYears(java.util.Date initialDate, java.util.Date finalDate);
+    public static java.util.Date dateInThePast(java.util.Date dateReference, int years, int days);
+    public static int extractDay(java.util.Date currentDate);
+    public static int extractMonth(java.util.Date currentDate);
+    public static int extractYear(java.util.Date currentDate);
+    public static java.util.Date firstDayOfNextMonth(java.util.Date date);
+    public static string formatDate(java.util.Date value, string format);
+    public static java.lang.Integer getDayOfMonth(java.util.Date referenceDate);
+    public static java.util.Date getFirstDayOfMonthOf(java.util.Date referenceDate);
+    public static java.util.Date getSystemDate();
+    public static java.util.Date getUndefinedDate();
+    public static java.util.Date lastDayOfMonth(java.util.Date date);
+    public static java.util.Date lastDayOfMonth(java.util.Date date, int numberOfMonth);
+    public static java.util.Date newDate(int day, int month, int year);
+}
+
+public class EnumerationUtils
+{
+    public static string convertEnumToString(java.lang.Enum enum1);
+}
+
+public class NameUtils
+{
+    public static string normalize(string name);
+}
+
+public class NumberUtils
+{
+    public static string format(java.lang.Number number, string mask);
+    public static java.math.BigDecimal roundUp(java.math.BigDecimal value, java.lang.Integer scale);
+}
+
+public class PreprocessingRuleUtils
+{
+    public static boolean isDefined(object value);
+    public static boolean isPositiveAmountValueDefined(java.math.BigDecimal value);
+    public static java.math.BigDecimal newAmountValue();
+    public static java.lang.Integer newIntegerValue();
+    public static string newStringValue();
+}
+
+public class RuleUtils
+{
+    public static string booleanToString(boolean value);
+    public static string dateToString(java.util.Date value);
+    public static string longToString(java.lang.Long value);
+}
+

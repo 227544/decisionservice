@@ -1,0 +1,74 @@
+# Vocabulary Properties
+uuid = 3d77afe0-4a98-43a8-b034-546df8359f67
+
+# com.bnpparibas.cardif.domain.Claim
+com.bnpparibas.cardif.domain.Claim#concept.label = claim
+com.bnpparibas.cardif.domain.Claim.amount#phrase.action = set the amount of {this} to {amount}
+com.bnpparibas.cardif.domain.Claim.amount#phrase.navigation = {amount} of {this}
+com.bnpparibas.cardif.domain.Claim.date#phrase.action = set the date of {this} to {date}
+com.bnpparibas.cardif.domain.Claim.date#phrase.navigation = {date} of {this}
+com.bnpparibas.cardif.domain.Claim.id#phrase.action = set the id of {this} to {id}
+com.bnpparibas.cardif.domain.Claim.id#phrase.navigation = {id} of {this}
+com.bnpparibas.cardif.domain.Claim.number#phrase.action = set the number of {this} to {number}
+com.bnpparibas.cardif.domain.Claim.number#phrase.navigation = {number} of {this}
+com.bnpparibas.cardif.domain.Claim.ocurrenceDate#phrase.action = set the ocurrence date of {this} to {ocurrence date}
+com.bnpparibas.cardif.domain.Claim.ocurrenceDate#phrase.navigation = {ocurrence date} of {this}
+com.bnpparibas.cardif.domain.Claim.setUnknownId()#phrase.action = setUnknownId {this}
+
+# com.bnpparibas.cardif.domain.DecisionResponse
+com.bnpparibas.cardif.domain.DecisionResponse#concept.label = decision response
+com.bnpparibas.cardif.domain.DecisionResponse.messagesList#phrase.action = set the messages of {this} to {message}
+com.bnpparibas.cardif.domain.DecisionResponse.messagesList#phrase.navigation = {message} of {this}
+com.bnpparibas.cardif.domain.DecisionResponse.setUnknownStatus()#phrase.action = setUnknownStatus {this}
+com.bnpparibas.cardif.domain.DecisionResponse.status#phrase.action = set the {status} of {this}
+com.bnpparibas.cardif.domain.DecisionResponse.status#phrase.navigation = {status} of {this}
+
+# com.bnpparibas.cardif.domain.Declaration
+com.bnpparibas.cardif.domain.Declaration#concept.label = declaration
+com.bnpparibas.cardif.domain.Declaration.claimList#phrase.action = set the claims of {this} to {claim}
+com.bnpparibas.cardif.domain.Declaration.claimList#phrase.navigation = {claim} of {this}
+com.bnpparibas.cardif.domain.Declaration.claimantName#phrase.action = set the claimant name of {this} to {claimant name}
+com.bnpparibas.cardif.domain.Declaration.claimantName#phrase.navigation = {claimant name} of {this}
+com.bnpparibas.cardif.domain.Declaration.claimantSameAsVictim#phrase.action = make it {claimant same as victim} that {this} is claimant same as victim
+com.bnpparibas.cardif.domain.Declaration.claimantSameAsVictim#phrase.navigation = {this} is claimant same as victim
+com.bnpparibas.cardif.domain.Declaration.date#phrase.action = set the date of {this} to {date}
+com.bnpparibas.cardif.domain.Declaration.date#phrase.navigation = {date} of {this}
+com.bnpparibas.cardif.domain.Declaration.declarationHistoryList#phrase.action = set the declaration histories of {this} to {declaration history}
+com.bnpparibas.cardif.domain.Declaration.declarationHistoryList#phrase.navigation = {declaration history} of {this}
+com.bnpparibas.cardif.domain.Declaration.declarationStatusList#phrase.action = set the declaration status of {this} to {declaration statu}
+com.bnpparibas.cardif.domain.Declaration.declarationStatusList#phrase.navigation = {declaration statu} of {this}
+com.bnpparibas.cardif.domain.Declaration.documentNumber#phrase.action = set the document number of {this} to {document number}
+com.bnpparibas.cardif.domain.Declaration.documentNumber#phrase.navigation = {document number} of {this}
+com.bnpparibas.cardif.domain.Declaration.id#phrase.action = set the id of {this} to {id}
+com.bnpparibas.cardif.domain.Declaration.id#phrase.navigation = {id} of {this}
+com.bnpparibas.cardif.domain.Declaration.ocurrenceTimeProvided#phrase.action = make it {ocurrence time provided} that {this} is ocurrence time provided
+com.bnpparibas.cardif.domain.Declaration.ocurrenceTimeProvided#phrase.navigation = {this} is ocurrence time provided
+com.bnpparibas.cardif.domain.Declaration.setUnknownClaimantSameAsVictim()#phrase.action = setUnknownClaimantSameAsVictim {this}
+com.bnpparibas.cardif.domain.Declaration.setUnknownId()#phrase.action = setUnknownId {this}
+com.bnpparibas.cardif.domain.Declaration.setUnknownOcurrenceTimeProvided()#phrase.action = setUnknownOcurrenceTimeProvided {this}
+
+# com.bnpparibas.cardif.domain.DeclarationHistory
+com.bnpparibas.cardif.domain.DeclarationHistory#concept.label = declaration history
+com.bnpparibas.cardif.domain.DeclarationHistory.date#phrase.action = set the date of {this} to {date}
+com.bnpparibas.cardif.domain.DeclarationHistory.date#phrase.navigation = {date} of {this}
+com.bnpparibas.cardif.domain.DeclarationHistory.event#phrase.action = set the event of {this} to {event}
+com.bnpparibas.cardif.domain.DeclarationHistory.event#phrase.navigation = {event} of {this}
+com.bnpparibas.cardif.domain.DeclarationHistory.id#phrase.action = set the id of {this} to {id}
+com.bnpparibas.cardif.domain.DeclarationHistory.id#phrase.navigation = {id} of {this}
+com.bnpparibas.cardif.domain.DeclarationHistory.reason#phrase.action = set the reason of {this} to {reason}
+com.bnpparibas.cardif.domain.DeclarationHistory.reason#phrase.navigation = {reason} of {this}
+com.bnpparibas.cardif.domain.DeclarationHistory.setUnknownEvent()#phrase.action = setUnknownEvent {this}
+com.bnpparibas.cardif.domain.DeclarationHistory.setUnknownId()#phrase.action = setUnknownId {this}
+
+# com.bnpparibas.cardif.domain.DeclarationStatus
+com.bnpparibas.cardif.domain.DeclarationStatus#concept.label = declaration status
+com.bnpparibas.cardif.domain.DeclarationStatus.accepted#phrase.action = set the accepted of {this} to {accepted}
+com.bnpparibas.cardif.domain.DeclarationStatus.accepted#phrase.navigation = {accepted} of {this}
+com.bnpparibas.cardif.domain.DeclarationStatus.declared#phrase.action = set the declared of {this} to {declared}
+com.bnpparibas.cardif.domain.DeclarationStatus.declared#phrase.navigation = {declared} of {this}
+com.bnpparibas.cardif.domain.DeclarationStatus.new#phrase.action = set the new of {this} to {new}
+com.bnpparibas.cardif.domain.DeclarationStatus.new#phrase.navigation = {new} of {this}
+com.bnpparibas.cardif.domain.DeclarationStatus.pending#phrase.action = set the pending of {this} to {pending}
+com.bnpparibas.cardif.domain.DeclarationStatus.pending#phrase.navigation = {pending} of {this}
+com.bnpparibas.cardif.domain.DeclarationStatus.rejected#phrase.action = set the rejected of {this} to {rejected}
+com.bnpparibas.cardif.domain.DeclarationStatus.rejected#phrase.navigation = {rejected} of {this}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Claim ocurrence date validation</name>
+  <uuid>c5862ca4-52b3-45bf-aa32-c02384b7162a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the ocurrence date of 'the claim' is before the date of 'the declaration'
+then
+    set the true of 'the decision response' ;
+else
+    set the messages of 'the decision response' to { "the ocorrence date is greater than the declaration date" } ;
+    set the false of 'the decision response' ; 
+    print the name of this rule ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

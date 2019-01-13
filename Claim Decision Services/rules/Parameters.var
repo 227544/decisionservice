@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Parameters</name>
+  <uuid>abeed553-2e7a-42c8-a620-879b74304ce2</uuid>
+  <variables name="declarationHistoryParam" type="com.bnpparibas.cardif.domain.DeclarationHistory" initialValue="" verbalization="the declaration history"/>
+  <variables name="claimParam" type="com.bnpparibas.cardif.domain.Claim" initialValue="" verbalization="the claim"/>
+  <variables name="declarationParam" type="com.bnpparibas.cardif.domain.Declaration" initialValue="" verbalization="the declaration"/>
+  <variables name="decisionResponseParam" type="com.bnpparibas.cardif.domain.DecisionResponse" initialValue="" verbalization="the decision response"/>
+  <variables name="declarationStatusParam" type="com.bnpparibas.cardif.domain.DeclarationStatus" initialValue="" verbalization="the declaration status"/>
+</ilog.rules.studio.model.base:VariableSet>

@@ -1,0 +1,308 @@
+include "ilog/rules/xml/binding/xsd_types.xom";
+
+package com.bnpparibas.cardif.domain;
+
+
+public class Claim
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "5",
+            xmlScope "global",
+            xmlType "{http://cardif.bnpparibas.com/domain}Claim",
+            xsdLocation "acme.xsd"
+        }
+{
+    public java.math.BigDecimal amount
+                property "ilog.rules.xml.fieldInfo" {
+                    index "4",
+                    xmlKind "ELEMENT",
+                    xmlName "amount",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}decimal",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDecimal"
+                };
+    public ilog.rules.xml.types.IlrDate date
+                property "ilog.rules.xml.fieldInfo" {
+                    index "2",
+                    xmlKind "ELEMENT",
+                    xmlName "date",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}date",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDate"
+                };
+    public long id
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    xmlKind "ELEMENT",
+                    xmlName "id",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}long",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdLong"
+                };
+    public string number
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    xmlKind "ELEMENT",
+                    xmlName "number",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public ilog.rules.xml.types.IlrDate ocurrenceDate
+                property "ilog.rules.xml.fieldInfo" {
+                    index "3",
+                    xmlKind "ELEMENT",
+                    xmlName "ocurrenceDate",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}date",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDate"
+                };
+    public Claim();
+    public void setUnknownId();
+}
+
+public class DecisionResponse
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "2",
+            xmlScope "global",
+            xmlType "{http://cardif.bnpparibas.com/domain}DecisionResponse",
+            xsdLocation "acme.xsd"
+        }
+{
+    public java.util.Vector messagesList domain 0,* class string
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    xmlKind "ELEMENT",
+                    xmlName "messages",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public boolean status domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    xmlKind "ELEMENT",
+                    xmlName "status",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}boolean",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdBoolean"
+                };
+    public DecisionResponse();
+    public void setUnknownStatus();
+}
+
+public class Declaration
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "9",
+            xmlScope "global",
+            xmlType "{http://cardif.bnpparibas.com/domain}Declaration",
+            xsdLocation "acme.xsd"
+        }
+{
+    public java.util.Vector claimList domain 0,* class com.bnpparibas.cardif.domain.Claim
+                property "ilog.rules.xml.fieldInfo" {
+                    index "2",
+                    xmlKind "ELEMENT",
+                    xmlName "claim",
+                    xmlType "{http://cardif.bnpparibas.com/domain}Claim",
+                    xomComponentType "com.bnpparibas.cardif.domain.Claim"
+                };
+    public string claimantName domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "4",
+                    xmlKind "ELEMENT",
+                    xmlName "claimantName",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public boolean claimantSameAsVictim
+                property "ilog.rules.xml.fieldInfo" {
+                    index "6",
+                    xmlKind "ELEMENT",
+                    xmlName "claimantSameAsVictim",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}boolean",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdBoolean"
+                };
+    public ilog.rules.xml.types.IlrDate date domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "5",
+                    xmlKind "ELEMENT",
+                    xmlName "date",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}date",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDate"
+                };
+    public java.util.Vector declarationHistoryList domain 0,* class com.bnpparibas.cardif.domain.DeclarationHistory
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    xmlKind "ELEMENT",
+                    xmlName "declarationHistory",
+                    xmlType "{http://cardif.bnpparibas.com/domain}DeclarationHistory",
+                    xomComponentType "com.bnpparibas.cardif.domain.DeclarationHistory"
+                };
+    public java.util.Vector declarationStatusList domain 0,* class com.bnpparibas.cardif.domain.DeclarationStatus
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    xmlKind "ELEMENT",
+                    xmlName "declarationStatus",
+                    xmlType "{http://cardif.bnpparibas.com/domain}DeclarationStatus",
+                    xomComponentType "com.bnpparibas.cardif.domain.DeclarationStatus"
+                };
+    public string documentNumber domain 0,1
+                property "ilog.rules.xml.fieldInfo" {
+                    index "8",
+                    xmlKind "ELEMENT",
+                    xmlName "documentNumber",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public int id
+                property "ilog.rules.xml.fieldInfo" {
+                    index "3",
+                    xmlKind "ELEMENT",
+                    xmlName "id",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public boolean ocurrenceTimeProvided
+                property "ilog.rules.xml.fieldInfo" {
+                    index "7",
+                    xmlKind "ELEMENT",
+                    xmlName "ocurrenceTimeProvided",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}boolean",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdBoolean"
+                };
+    public Declaration();
+    public void setUnknownClaimantSameAsVictim();
+    public void setUnknownId();
+    public void setUnknownOcurrenceTimeProvided();
+}
+
+public class DeclarationHistory
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "4",
+            xmlScope "global",
+            xmlType "{http://cardif.bnpparibas.com/domain}DeclarationHistory",
+            xsdLocation "acme.xsd"
+        }
+{
+    public ilog.rules.xml.types.IlrDate date
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    xmlKind "ELEMENT",
+                    xmlName "date",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}date",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdDate"
+                };
+    public int event
+                property "ilog.rules.xml.fieldInfo" {
+                    index "3",
+                    xmlKind "ELEMENT",
+                    xmlName "event",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}int",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdInt"
+                };
+    public long id
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    xmlKind "ELEMENT",
+                    xmlName "id",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}long",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdLong"
+                };
+    public string reason
+                property "ilog.rules.xml.fieldInfo" {
+                    index "2",
+                    xmlKind "ELEMENT",
+                    xmlName "reason",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public DeclarationHistory();
+    public void setUnknownEvent();
+    public void setUnknownId();
+}
+
+public class DeclarationStatus
+        extends ilog.rules.xml.IlrXmlObject
+        property "ilog.rules.engine.driver" "ilog.rules.xml.binding.IlrXmlClassDriver"
+        property "ilog.rules.xml.classInfo" {
+            derivation "EXTENSION",
+            model "sequence",
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0",
+            xmlFieldNumber "5",
+            xmlScope "global",
+            xmlType "{http://cardif.bnpparibas.com/domain}DeclarationStatus",
+            xsdLocation "acme.xsd"
+        }
+{
+    public string accepted
+                property "ilog.rules.xml.fieldInfo" {
+                    index "3",
+                    xmlKind "ELEMENT",
+                    xmlName "accepted",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public string declared
+                property "ilog.rules.xml.fieldInfo" {
+                    index "1",
+                    xmlKind "ELEMENT",
+                    xmlName "declared",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public string new
+                property "ilog.rules.xml.fieldInfo" {
+                    index "0",
+                    xmlKind "ELEMENT",
+                    xmlName "new",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public string pending
+                property "ilog.rules.xml.fieldInfo" {
+                    index "4",
+                    xmlKind "ELEMENT",
+                    xmlName "pending",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public string rejected
+                property "ilog.rules.xml.fieldInfo" {
+                    index "2",
+                    xmlKind "ELEMENT",
+                    xmlName "rejected",
+                    xmlType "{http://www.w3.org/2001/XMLSchema}string",
+                    xomComponentType "ilog.rules.xml.types.xsd.XsdString"
+                };
+    public DeclarationStatus();
+}
+
+class IlogRulesXmlPackage
+        property "ilog.rules.xml.packageInfo" {
+            "1" {
+                xmlName "{http://cardif.bnpparibas.com/domain}declaration",
+                xomType "com.bnpparibas.cardif.domain.Declaration"
+            },
+            "2" {
+                xmlName "{http://cardif.bnpparibas.com/domain}decisionResponse",
+                xomType "com.bnpparibas.cardif.domain.DecisionResponse"
+            },
+            version "ilog.rules.xml.binding.IlrXmlDefaultDataDriver_7_0"
+        }
+        property visible "false"
+{
+}
+

@@ -1,0 +1,463 @@
+<b2x:translation xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd">
+    <id>c5c610b9-e9f0-415d-aad5-d2dbf3d295dd</id>
+    <class>
+        <businessName>com.bnpparibas.cardif.rule.utils.DateUtils</businessName>
+        <executionName>void</executionName>
+        <import>java.text.SimpleDateFormat</import>
+        <import>java.util.Calendar</import>
+        <import>java.util.Date</import>
+        <import>org.joda.time.*</import>
+        <import>org.joda.time.DateTime</import>
+        <import>org.joda.time.Chronology</import>
+        <import>org.joda.time.LocalDate</import>
+        <method>
+            <name>addDays</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            if (currentDate == null) {
+    return currentDate;
+} 
+DateTime dateTime = new DateTime(currentDate);
+return dateTime.plusDays(numberOfDays).toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>addDaysToDate</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            if (currentDate == null) {
+    return null;
+}
+return new LocalDate(currentDate)
+        .plusDays(quantityOfDays)
+        .toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>addMonths</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            if (currentDate == null) {
+    return currentDate;
+}
+DateTime newDate = new DateTime(currentDate.getTime()).plusMonths(numberOfMonths);
+return newDate.toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>addMonthsToDateRange</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            if (initialDate == null) {
+    throw new IllegalArgumentException();
+}
+DateTime start = new DateTime(initialDate.getTime());
+DateTime last = new DateTime(finalDate.getTime());
+Period period = new Period(start.dayOfMonth().withMinimumValue().withTimeAtStartOfDay(),
+                            last.dayOfMonth().withMinimumValue().withTimeAtStartOfDay(),
+                            PeriodType.months().withDaysRemoved());
+DateTime newDate = new DateTime(initialDate.getTime()).plusMonths(numberOfMonths + period.getMonths());
+        return newDate.toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>addYears</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            if (currentDate == null) {
+ 	return currentDate;
+ }
+ DateTime dateTime = new DateTime(currentDate);
+ return dateTime.plusYears(numberOfYears).toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>countDays</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            LocalDate start = new LocalDate(initialDate);
+LocalDate end = new LocalDate(finalDate);
+return Days.daysBetween(start, end).getDays();
+            ]]></body>
+        </method>
+        <method>
+            <name>countMonths</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            LocalDate start = new LocalDate(initialDate);
+ LocalDate end = new LocalDate(finalDate).plusDays(1);
+ return Months.monthsBetween(start, end).getMonths();
+            ]]></body>
+        </method>
+        <method>
+            <name>countYears</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            LocalDate start = new LocalDate(initialDate);
+LocalDate end = new LocalDate(finalDate);
+return Years.yearsBetween(start, end).getYears();
+            ]]></body>
+        </method>
+        <method>
+            <name>extractDay</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            if (currentDate == null) {
+    return 0;
+}
+LocalDate date = new LocalDate(currentDate);
+return date.getDayOfMonth();
+            ]]></body>
+        </method>
+        <method>
+            <name>extractMonth</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            if (currentDate == null) {
+    return 0;
+}
+LocalDate date = new LocalDate(currentDate);
+return date.getMonthOfYear();
+            ]]></body>
+        </method>
+        <method>
+            <name>extractYear</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            if (currentDate == null) {
+    return 0;
+}
+LocalDate date = new LocalDate(currentDate);
+return date.getYear();
+            ]]></body>
+        </method>
+        <method>
+            <name>firstDayOfNextMonth</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            Calendar calendar = Calendar.getInstance();
+calendar.setTime(date);
+calendar.set(Calendar.DAY_OF_MONTH, 1);
+calendar.add(Calendar.MONTH, 1);
+return new LocalDate(calendar.getTime()).toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>formatDate</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            if (value == null) {
+	return null;
+}
+return new SimpleDateFormat(format).format(value);
+            ]]></body>
+        </method>
+        <method>
+            <name>getDayOfMonth</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            if (referenceDate != null) {
+	return new LocalDate(referenceDate).getDayOfMonth();
+}
+
+return null;
+            ]]></body>
+        </method>
+        <method>
+            <name>getFirstDayOfMonthOf</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            if (referenceDate != null) {
+	LocalDate firstDayOfMonth = new LocalDate(referenceDate).withDayOfMonth(1);
+	return firstDayOfMonth.toDate();
+} else {
+	return null;
+}
+            ]]></body>
+        </method>
+        <method>
+            <name>getSystemDate</name>
+            <body language="irl"><![CDATA[
+            return new Date(System.currentTimeMillis());
+            ]]></body>
+        </method>
+        <method>
+            <name>getUndefinedDate</name>
+            <body language="irl"><![CDATA[
+            return null;
+            ]]></body>
+        </method>
+        <method>
+            <name>lastDayOfMonth</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            Calendar calendar = Calendar.getInstance();
+calendar.setTime(date);
+int lastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+calendar.set(Calendar.DAY_OF_MONTH, lastDayOfMonth);
+return new LocalDate(calendar.getTime()).toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>lastDayOfMonth</name>
+            <parameter type="java.util.Date"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            Calendar calendar = Calendar.getInstance();
+int actualMonth = calendar.get(Calendar.MONTH);
+int nextMonth = actualMonth + numberOfMonth;
+calendar.set(Calendar.MONTH, nextMonth);
+calendar.set(Calendar.DAY_OF_MONTH, 1);
+int lastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+calendar.set(Calendar.DAY_OF_MONTH, lastDayOfMonth);
+return new LocalDate(calendar.getTime()).toDate();
+            ]]></body>
+        </method>
+        <method>
+            <name>newDate</name>
+            <parameter type="int"/>
+            <parameter type="int"/>
+            <parameter type="int"/>
+            <body language="irl"><![CDATA[
+            Chronology chronology = new DateTime(new Date()).getChronology();
+return new LocalDate(year, month + 1, day, chronology).toDate();
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.bnpparibas.cardif.rule.utils.EnumerationUtils</businessName>
+        <executionName>void</executionName>
+        <method>
+            <name>convertEnumToString</name>
+            <parameter type="java.lang.Enum"/>
+            <body language="irl"><![CDATA[
+            return enum.name();
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.bnpparibas.cardif.rule.utils.NameUtils</businessName>
+        <executionName>void</executionName>
+        <method>
+            <name>normalize</name>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            return ilog.rules.util.IlrIdConverter.getEngineIdentifier(name);
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.bnpparibas.cardif.rule.utils.NumberUtils</businessName>
+        <executionName>void</executionName>
+        <import>java.text.DecimalFormat</import>
+        <method>
+            <name>format</name>
+            <parameter type="java.lang.Number"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            if (number == null) {
+	return null;
+}
+return new DecimalFormat(mask).format(number);
+            ]]></body>
+        </method>
+        <method>
+            <name>roundUp</name>
+            <parameter type="java.math.BigDecimal"/>
+            <parameter type="java.lang.Integer"/>
+            <body language="irl"><![CDATA[
+            java.math.BigDecimal roundValue = value.setScale(scale, java.math.BigDecimal.ROUND_HALF_UP);
+return roundValue.setScale(value.scale());
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.bnpparibas.cardif.rule.utils.ObjectUtils</businessName>
+        <executionName>void</executionName>
+        <import>java.math.BigDecimal</import>
+        <method>
+            <name>defaultBigDecimal</name>
+            <parameter type="java.math.BigDecimal"/>
+            <parameter type="java.math.BigDecimal"/>
+            <body language="irl"><![CDATA[
+            if (value == null){
+	return defaultValue;
+} else {
+	return value;
+}
+            ]]></body>
+        </method>
+        <method>
+            <name>defaultBigDecimalZero</name>
+            <parameter type="java.math.BigDecimal"/>
+            <body language="irl"><![CDATA[
+            if (value == null) {
+	return java.math.BigDecimal.ZERO;
+} else {
+	return value;
+}
+            ]]></body>
+        </method>
+        <method>
+            <name>defaultBooleanFalse</name>
+            <parameter type="java.lang.Boolean"/>
+            <body language="irl"><![CDATA[
+            if (value == null) {
+	return false;
+}
+
+return value;
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.bnpparibas.cardif.rule.utils.PreprocessingRuleUtils</businessName>
+        <executionName>void</executionName>
+        <method>
+            <name>isDefined</name>
+            <parameter type="java.lang.Object"/>
+            <body language="irl"><![CDATA[
+            return (value != null);
+            ]]></body>
+        </method>
+        <method>
+            <name>isPositiveAmountValueDefined</name>
+            <parameter type="java.math.BigDecimal"/>
+            <body language="irl"><![CDATA[
+            return value != null 
+		&& value.signum() >= 0;
+            ]]></body>
+        </method>
+        <method>
+            <name>newAmountValue</name>
+            <body language="irl"><![CDATA[
+            return java.math.BigDecimal.ZERO;
+            ]]></body>
+        </method>
+        <method>
+            <name>newIntegerValue</name>
+            <body language="irl"><![CDATA[
+            return 0;
+            ]]></body>
+        </method>
+        <method>
+            <name>newStringValue</name>
+            <body language="irl"><![CDATA[
+            return new String();
+            ]]></body>
+        </method>
+    </class>
+    <class>
+        <businessName>com.bnpparibas.cardif.rule.utils.RuleUtils</businessName>
+        <executionName>void</executionName>
+        <import>java.util.Date</import>
+        <import>java.util.Set</import>
+        <import>com.google.common.base.Splitter</import>
+        <import>com.google.common.collect.Sets</import>
+        <import>ilog.rules.engine.IlrRule</import>
+        <import>ilog.rules.factory.IlrPropertyList</import>
+        <import>com.bnpparibas.cardif.pims.domain.ODMExtensionModelAttribute</import>
+        <import>java.util.Iterator</import>
+        <import>java.util.HashSet</import>
+        <method>
+            <name>booleanToString</name>
+            <parameter type="boolean"/>
+            <body language="irl"><![CDATA[
+            return String.valueOf(value);
+            ]]></body>
+        </method>
+        <method>
+            <name>containsRuleName</name>
+            <parameter type="java.lang.Object"/>
+            <parameter type="java.lang.String"/>
+            <body language="irl"><![CDATA[
+            if (ruleNames == null || ruleNames.trim().isEmpty()) {
+	return true;
+}
+		
+IlrRule odmRuleInstance = (IlrRule) ruleInstance;
+String odmNativeRuleName = null;
+
+if (ruleInstance != null) {
+	IlrPropertyList ruleProperties = odmRuleInstance.getProperties();
+	if (ruleProperties.containsKey(ODMExtensionModelAttribute.RULE_NAME.getDescription())) {
+		String currentTokens = odmRuleInstance.getPropertyValue(ODMExtensionModelAttribute.RULE_NAME.getDescription()).toString();
+		if (currentTokens != null) {
+			Iterable<String> currentTokensIterable = Splitter.on(",").split(currentTokens);
+			Iterator<String> currentTokensIterator = currentTokensIterable.iterator();
+			while (currentTokensIterator.hasNext()) {
+				odmNativeRuleName = currentTokensIterator.next();
+				break;
+			}
+		}
+	}
+}
+
+if (odmNativeRuleName != null) {
+	Iterable<String> ruleNamesIterable = Splitter.on(",").split(ruleNames);
+	Iterator<String> ruleNamesIterator = ruleNamesIterable.iterator();
+	while (ruleNamesIterator.hasNext()) {
+		String ruleName = ruleNamesIterator.next();
+		if (odmNativeRuleName.indexOf(ruleName.trim().toUpperCase()) != -1) {
+			return true;
+		}
+	}
+}
+
+return false;
+            ]]></body>
+        </method>
+        <method>
+            <name>dateToString</name>
+            <parameter type="java.util.Date"/>
+            <body language="irl"><![CDATA[
+            if (value == null) {
+	return "";	
+}
+return value.toString();
+            ]]></body>
+        </method>
+        <method>
+            <name>getRulePropertyValues</name>
+            <parameter type="ilog.rules.engine.IlrRule"/>
+            <parameter type="com.bnpparibas.cardif.pims.domain.ODMExtensionModelAttribute"/>
+            <body language="irl"><![CDATA[
+            HashSet result = new HashSet();	
+if (ruleInstance != null && aspect != null) {
+	IlrPropertyList ruleProperties = ruleInstance.getProperties(); 
+	if (ruleProperties.containsKey(aspect.getDescription())) {
+		String currentTokens = ruleInstance.getPropertyValue(aspect.getDescription()).toString();
+		if (currentTokens != null) {
+			Iterable<String> currentTokensIterable = Splitter.on(",").split(currentTokens);
+			Iterator<String> currentTokensIterator = currentTokensIterable.iterator();
+			while (currentTokensIterator.hasNext()) {
+				result.add(currentTokensIterator.next());
+			}	
+		}
+	}
+}		
+return result;
+            ]]></body>
+        </method>
+        <method>
+            <name>longToString</name>
+            <parameter type="java.lang.Long"/>
+            <body language="irl"><![CDATA[
+            if (value == null) {
+	return "";
+}
+return value.toString();
+            ]]></body>
+        </method>
+    </class>
+</b2x:translation>

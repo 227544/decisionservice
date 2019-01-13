@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="acmeOperation" usingRuleflow="true" ruleflowName="mainRuleFlow" targetRuleProjectName="Chile Decision Services - ACME">
+  <name>acmeOperation</name>
+  <uuid>43b2312a-c779-4af1-8048-781cf2b7c587</uuid>
+  <referencedVariables variableName="declarationParam" variableSetName="Parameters">
+    <variableSet href="../rules/Parameters.var#abeed553-2e7a-42c8-a620-879b74304ce2"/>
+  </referencedVariables>
+  <referencedVariables variableName="decisionResponseParam" variableSetName="Parameters" direction="OUT">
+    <variableSet href="../rules/Parameters.var#abeed553-2e7a-42c8-a620-879b74304ce2"/>
+  </referencedVariables>
+  <referencedVariables variableName="claimParam" variableSetName="Parameters">
+    <variableSet href="../rules/Parameters.var#abeed553-2e7a-42c8-a620-879b74304ce2"/>
+  </referencedVariables>
+  <referencedVariables variableName="declarationHistoryParam" variableSetName="Parameters">
+    <variableSet href="../rules/Parameters.var#abeed553-2e7a-42c8-a620-879b74304ce2"/>
+  </referencedVariables>
+  <ruleflow href="../rules/mainRuleFlow.rfl#a409a162-2c36-4dad-ac91-a4d67d18646e"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="acmeOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../Chile%20Decision%20Services%20-%20ACME#b01d1305-8551-419d-a4e4-660e710e4888"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

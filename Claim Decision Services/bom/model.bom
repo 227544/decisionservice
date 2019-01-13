@@ -1,0 +1,69 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/Chile Decision Services - ACME//Chile Decision Services - ACME/data/schema/acme.xsd"
+property uuid "60808ec3-0304-4075-af12-fde0804ff5dc"
+package com.bnpparibas.cardif.domain;
+
+
+public class Claim
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public java.math.BigDecimal amount;
+    public ilog.rules.xml.types.IlrDate date;
+    public long id;
+    public string number;
+    public ilog.rules.xml.types.IlrDate ocurrenceDate;
+    public Claim();
+    public void setUnknownId();
+}
+
+public class DecisionResponse
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public java.util.Vector messagesList domain 0,* class string;
+    public boolean status domain 0,1;
+    public DecisionResponse();
+    public void setUnknownStatus();
+}
+
+public class Declaration
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public java.util.Vector claimList domain 0,* class com.bnpparibas.cardif.domain.Claim;
+    public string claimantName domain 0,1;
+    public boolean claimantSameAsVictim;
+    public ilog.rules.xml.types.IlrDate date domain 0,1;
+    public java.util.Vector declarationHistoryList domain 0,* class com.bnpparibas.cardif.domain.DeclarationHistory;
+    public java.util.Vector declarationStatusList domain 0,* class com.bnpparibas.cardif.domain.DeclarationStatus;
+    public string documentNumber domain 0,1;
+    public int id;
+    public boolean ocurrenceTimeProvided;
+    public Declaration();
+    public void setUnknownClaimantSameAsVictim();
+    public void setUnknownId();
+    public void setUnknownOcurrenceTimeProvided();
+}
+
+public class DeclarationHistory
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public ilog.rules.xml.types.IlrDate date;
+    public int event;
+    public long id;
+    public string reason;
+    public DeclarationHistory();
+    public void setUnknownEvent();
+    public void setUnknownId();
+}
+
+public class DeclarationStatus
+        extends ilog.rules.xml.IlrXmlObject
+{
+    public string accepted;
+    public string declared;
+    public string new;
+    public string pending;
+    public string rejected;
+    public DeclarationStatus();
+}
+
