@@ -4,7 +4,7 @@
   <uuid>c5862ca4-52b3-45bf-aa32-c02384b7162a</uuid>
   <locale>en_US</locale>
   <definition><![CDATA[if
-    the ocurrence date of 'the claim' is before 'the start period' 
+    'the ocurrence date'  is before 'the start period' 
 then
     set 'the decision' to true ;
 else

@@ -8,7 +8,7 @@
   <Body>
     <Preconditions>
       <Text><![CDATA[definitions 
-	set 'WaitingPeriod' to count days between the ocurrence date of 'the claim' and 'the start period' ;  ]]></Text>
+	set 'WaitingPeriod' to count days between  'the ocurrence date'  and 'the start period' ;  ]]></Text>
     </Preconditions>
     <Structure>
       <ConditionDefinitions>
@@ -79,6 +79,11 @@
       <Data Name="Definitions(A1)#Width"><![CDATA[281]]></Data>
       <Data Name="Definitions(C0)#HeaderText"><![CDATA[Waiting Period]]></Data>
       <Data Name="Definitions(C0)#Width"><![CDATA[370]]></Data>
+    </ResourceSet>
+    <ResourceSet Locale="pt_PT">
+      <Data Name="Definitions(A0)#Width"><![CDATA[312]]></Data>
+      <Data Name="Definitions(A1)#Width"><![CDATA[312]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[401]]></Data>
     </ResourceSet>
   </Resources>
 </DT>
