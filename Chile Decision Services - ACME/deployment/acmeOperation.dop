@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="acmeOperation" usingRuleflow="true" ruleflowName="Main RuleFlow" targetRuleProjectName="Chile Decision Services - ACME">
   <name>acmeOperation</name>
-  <uuid>43b2312a-c779-4af1-8048-781cf2b7c587</uuid>
-  <referencedVariables variableName="decisionResp" variableSetName="Parameters" direction="OUT">
-    <variableSet href="../rules/Parameters.var#abeed553-2e7a-42c8-a620-879b74304ce2"/>
+  <uuid>fcf67f5f-7e1b-4b18-95a2-be9ab9f94ec7</uuid>
+  <referencedVariables variableName="decisionRespParam" variableSetName="Parameters" direction="OUT">
+    <variableSet href="../rules/Parameters.var#50c5d8f4-8d2f-4c62-a3b5-18386e42a3f9"/>
   </referencedVariables>
-  <referencedVariables variableName="claimParam" variableSetName="Parameters" direction="IN_OUT">
-    <variableSet href="../rules/Parameters.var#abeed553-2e7a-42c8-a620-879b74304ce2"/>
+  <referencedVariables variableName="declarationParam" variableSetName="Parameters">
+    <variableSet href="../rules/Parameters.var#50c5d8f4-8d2f-4c62-a3b5-18386e42a3f9"/>
   </referencedVariables>
   <ruleflow href="../rules/Main%20RuleFlow.rfl#a409a162-2c36-4dad-ac91-a4d67d18646e"/>
   <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="acmeOperation_extractor" validator="Default Validator"/>

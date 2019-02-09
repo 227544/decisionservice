@@ -1,5 +1,5 @@
 
-property uuid "e51f213c-7367-4198-9d4e-b89297cd0b00"
+property uuid "df8f0ef1-aa9d-4ea5-a10b-57ff957a6a1d"
 package com.bnpparibas.cardif.rule.utils;
 
 
@@ -58,5 +58,11 @@ public class RuleUtils
     public static string booleanToString(boolean value);
     public static string dateToString(java.util.Date value);
     public static string longToString(java.lang.Long value);
+}
+
+public class StringUtil
+{
+    public static boolean containsOneOf(string str, java.lang.String[] pattern);
+    public static boolean notContainOneOf(string str, java.lang.String[] pattern);
 }
 

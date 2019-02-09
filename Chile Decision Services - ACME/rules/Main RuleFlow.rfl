@@ -8,62 +8,45 @@
 <Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
   <Body>
     <TaskList>
-      <StartTask Identifier="task_0"/>
-      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Claim Validations" Ordering="Default">
-        <InitialActions Language="irl"><![CDATA[//System.out.println("*******Starting Claim Validation.");]]></InitialActions>
-        <FinalActions Language="irl"><![CDATA[//System.out.println("*******End of Claim Validation.");]]></FinalActions>
+      <StartTask Identifier="task_2"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="004- Validar logica" Ordering="Default">
         <RuleList>
-          <Package Name="Claim Validation"/>
+          <Rule Uuid="a5bd1775-7fe1-4dd2-95ed-f43e4617aeca"/>
         </RuleList>
       </RuleTask>
-      <StopTask Identifier="task_3">
-        <Actions Language="irl"><![CDATA[System.out.println("\n### CLAIM OUTPUT ");
-System.out.println("Status" + claimParam.number);
-System.out.println("Main message" + decisionResp.messagesList);
-Iterator it = decisionResp.messagesList.iterator();
-while (it.hasNext()) {
-	System.out.println(" - " +(String)it.next());
-}]]></Actions>
-      </StopTask>
+      <StopTask Identifier="task_3"/>
     </TaskList>
     <NodeList>
-      <TaskNode Identifier="node_0" Task="task_0"/>
-      <TaskNode Identifier="node_2" Task="Claim Validations"/>
+      <TaskNode Identifier="node_1" Task="004- Validar logica"/>
+      <TaskNode Identifier="node_2" Task="task_2"/>
       <TaskNode Identifier="node_3" Task="task_3"/>
     </NodeList>
     <TransitionList>
-      <Transition Identifier="transition_2" Source="node_0" Target="node_2"/>
-      <Transition Identifier="transition_3" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_1" Target="node_3"/>
+      <Transition Identifier="transition_0" Source="node_2" Target="node_1"/>
     </TransitionList>
   </Body>
   <Resources>
     <ResourceSet Locale="en_US">
-      <Data Name="node_2#height">53.402344</Data>
-      <Data Name="node_3#height">22.0</Data>
-      <Data Name="node_0#height">21.0</Data>
-      <Data Name="node_2#name">node_1</Data>
-      <Data Name="node_3#width">22.000011</Data>
-      <Data Name="node_0#name">node_0</Data>
-      <Data Name="node_2#width">102.0</Data>
-      <Data Name="node_0#width">21.0</Data>
-      <Data Name="node_3#y">185.40234</Data>
-      <Data Name="node_0#x">51.0</Data>
-      <Data Name="node_0#y">10.5</Data>
-      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_3#height">23.0</Data>
+      <Data Name="node_2#height">21.0</Data>
+      <Data Name="node_2#name">node_0</Data>
+      <Data Name="node_2#width">21.0</Data>
+      <Data Name="node_3#y">290.60352</Data>
+      <Data Name="node_3#width">23.0</Data>
       <Data Name="node_3#name">node_2</Data>
-      <Data Name="node_2#y">97.70117</Data>
-      <Data Name="node_3#x">51.000008</Data>
+      <Data Name="node_1#name">node_1</Data>
+      <Data Name="node_3#x">51.0</Data>
+      <Data Name="node_1#x">50.0</Data>
+      <Data Name="node_1#width">102.0</Data>
+      <Data Name="node_1#y">194.05176</Data>
+      <Data Name="node_1#height">68.103516</Data>
+      <Data Name="node_2#x">56.0</Data>
+      <Data Name="node_2#y">63.5</Data>
     </ResourceSet>
   </Resources>
   <Properties>
-    <imports><![CDATA[import com.bnpparibas.cardif.domain.DecisionResponse;
-import java.util.Vector;
-import java.util.Iterator;
-import java.util.Date;
-use claimParam;
-use decisionResp;
-use claimParam;
-]]></imports>
+    <imports/>
   </Properties>
 </Ruleflow>
 </rfModel>

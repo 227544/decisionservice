@@ -1,0 +1,32 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/Chile Decision Services - ACME/C:/development/tmp/bois-xom.jar"
+property uuid "338134c4-abaa-4f84-90b2-6eea5ae91e99"
+package claimrules;
+
+
+public class DecisionResponse
+{
+    public string claimRejectedReason;
+    public string claimValidationName;
+    public java.lang.Integer claimValidationStatus;
+    public writeonly java.lang.Void messagesList;
+    public DecisionResponse();
+    public static java.lang.Void getMessagesList();
+}
+
+public class Declaration
+{
+    public java.util.Date birthdate;
+    public string claimRuleId;
+    public java.lang.Integer days;
+    public string logic;
+    public java.util.Date ocurrenceDate;
+    public java.util.Date reportDate;
+    public java.lang.Integer reportPeriod;
+    public string unit;
+    public java.lang.Boolean vigencia;
+    public java.lang.Integer years;
+    public Declaration();
+}
+

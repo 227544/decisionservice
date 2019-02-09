@@ -1,5 +1,5 @@
 # Vocabulary Properties
-uuid = 03ab744f-a5ed-49de-a762-492b3abeb2cf
+uuid = f7a5a3f3-592d-476a-991b-9bc34ebda9bd
 
 # com.bnpparibas.cardif.rule.utils.DateUtils
 com.bnpparibas.cardif.rule.utils.DateUtils#concept.label = date utils
@@ -51,3 +51,8 @@ com.bnpparibas.cardif.rule.utils.RuleUtils#concept.label = rule utils
 com.bnpparibas.cardif.rule.utils.RuleUtils.booleanToString(boolean)#phrase.navigation = booleanToString({0})
 com.bnpparibas.cardif.rule.utils.RuleUtils.dateToString(java.util.Date)#phrase.navigation = dateToString({0})
 com.bnpparibas.cardif.rule.utils.RuleUtils.longToString(java.lang.Long)#phrase.navigation = longToString({0})
+
+# com.bnpparibas.cardif.rule.utils.StringUtil
+com.bnpparibas.cardif.rule.utils.StringUtil#concept.label = String functions
+com.bnpparibas.cardif.rule.utils.StringUtil.containsOneOf(java.lang.String,java.lang.String[])#phrase.navigation = {0} contains one of {1}
+com.bnpparibas.cardif.rule.utils.StringUtil.notContainOneOf(java.lang.String,java.lang.String[])#phrase.navigation = {0} does not contain {1}

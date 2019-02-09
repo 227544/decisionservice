@@ -1,0 +1,36 @@
+# Vocabulary Properties
+claimrules.DecisionResponse.addToMessagesList(java.lang.String)#phrase.action = add messages: {0}
+uuid = 055193cc-acbb-420d-b1bc-b44a31495312
+
+# claimrules.DecisionResponse
+claimrules.DecisionResponse#concept.label = decision response
+claimrules.DecisionResponse.claimRejectedReason#phrase.action = set the claim rejected reason to {claim rejected reason}
+claimrules.DecisionResponse.claimRejectedReason#phrase.navigation = {claim rejected reason}
+claimrules.DecisionResponse.claimValidationName#phrase.action = set the claim validation name to {claim validation name}
+claimrules.DecisionResponse.claimValidationName#phrase.navigation = {claim validation name}
+claimrules.DecisionResponse.claimValidationStatus#phrase.action = set the claim validation status to {claim validation status}
+claimrules.DecisionResponse.claimValidationStatus#phrase.navigation = {claim validation status}
+claimrules.DecisionResponse.getMessagesList()#phrase.navigation = the messages list
+
+# claimrules.Declaration
+claimrules.Declaration#concept.label = declaration
+claimrules.Declaration.birthdate#phrase.action = set the birthdate to {birthdate}
+claimrules.Declaration.birthdate#phrase.navigation = {birthdate}
+claimrules.Declaration.claimRuleId#phrase.action = set the claim rule id to {claim rule id}
+claimrules.Declaration.claimRuleId#phrase.navigation = {claim rule id}
+claimrules.Declaration.days#phrase.action = set the days to {days}
+claimrules.Declaration.days#phrase.navigation = {days}
+claimrules.Declaration.logic#phrase.action = set the logic to {logic}
+claimrules.Declaration.logic#phrase.navigation = {logic}
+claimrules.Declaration.ocurrenceDate#phrase.action = set the ocurrence date to {ocurrence date}
+claimrules.Declaration.ocurrenceDate#phrase.navigation = {ocurrence date}
+claimrules.Declaration.reportDate#phrase.action = set the report date to {report date}
+claimrules.Declaration.reportDate#phrase.navigation = {report date}
+claimrules.Declaration.reportPeriod#phrase.action = set the report period to {report period}
+claimrules.Declaration.reportPeriod#phrase.navigation = {report period}
+claimrules.Declaration.unit#phrase.action = set the unit to {unit}
+claimrules.Declaration.unit#phrase.navigation = {unit}
+claimrules.Declaration.vigencia#phrase.action = the vigencia to {vigencia}
+claimrules.Declaration.vigencia#phrase.navigation = the vigencia
+claimrules.Declaration.years#phrase.action = set the years to {years}
+claimrules.Declaration.years#phrase.navigation = {years}
