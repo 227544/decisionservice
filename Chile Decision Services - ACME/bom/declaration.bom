@@ -6,6 +6,7 @@ package claimrules;
 
 
 public class DecisionResponse
+        extends java.io.Serializable
 {
     public string claimRejectedReason;
     public string claimValidationName;
@@ -16,6 +17,7 @@ public class DecisionResponse
 }
 
 public class Declaration
+        extends java.io.Serializable
 {
     public java.util.Date birthdate;
     public string claimRuleId;

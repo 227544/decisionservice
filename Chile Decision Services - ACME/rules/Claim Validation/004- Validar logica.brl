@@ -20,6 +20,5 @@
   <definition><![CDATA[then
     set the claim validation status to 0 ;
     set the claim validation name to "teste" ; 
-    set the claim rejected reason to "unit should be >=, > or =" ;
-]]></definition>
+    set the claim rejected reason to "unit should be >=, > or =" ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
